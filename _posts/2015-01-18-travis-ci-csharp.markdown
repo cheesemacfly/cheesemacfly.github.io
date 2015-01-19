@@ -1,0 +1,46 @@
+---
+layout: post
+title:  "Setup Travis CI to compile a C# project and run NUnit tests"
+date:   2015-01-18 23:00:00
+categories: blog
+---
+I recently built a C# [library] to access the New York City MTA service status feed.  
+This project includes unit tests built with the [NUnit] framework and it was my first shot at using Tavis CI.  
+
+It is fairly easy to find examples of the `.travis.yml` file including the `apt-get` commands installing mono but it isn't required anymore.  
+Travis CI has now an easier way of doing things when it comes to building C# (even if it is stated that this is [beta][doc] and that it could be removed at anytime...)
+
+Here is what the `.travis.yml` file I used ended up looking:
+
+{% highlight yaml linenos=table %}
+language: csharp
+solution: MTAServiceStatus.sln
+before_install:
+  - sudo apt-get install nunit-console
+before_script:
+  - nuget restore MTAServiceStatus.sln
+after_script:
+  - nunit-console Tests/bin/Release/Tests.dll
+{% endhighlight %}
+
+The first and second lines are obvious and [documented][doc].  
+But using [NUnit] is not and requires the console to be installed (line 4) and run using the test project output (the .dll file, line 8).  
+`Release` (which is the default) can be replaced by the build configuration you are using using the following `.travis.yml`file sample:
+
+{% highlight yaml linenos=table %}
+language: csharp
+script:
+  - xbuild /p:Configuration=Debug MTAServiceStatus.sln
+before_install:
+  - sudo apt-get install nunit-console
+before_script:
+  - nuget restore MTAServiceStatus.sln
+after_script:
+  - nunit-console Tests/bin/Debug/Tests.dll
+{% endhighlight %}
+
+Line 3 and 9 need to be adapted to your build configuration.
+
+[NUnit]:        http://www.nunit.org/
+[library]:      https://github.com/cheesemacfly/MTAServiceStatus
+[doc]:          http://docs.travis-ci.com/user/languages/csharp/
