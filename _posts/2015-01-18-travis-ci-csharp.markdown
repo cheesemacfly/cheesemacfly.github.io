@@ -15,11 +15,11 @@ Here is what the `.travis.yml` file I used ended up looking:
 
 {% highlight yaml linenos=table %}
 language: csharp
-solution: MTAServiceStatus.sln
+solution: solution-name.sln
 before_install:
   - sudo apt-get install nunit-console
 before_script:
-  - nuget restore MTAServiceStatus.sln
+  - nuget restore solution-name.sln
 after_script:
   - nunit-console Tests/bin/Release/Tests.dll
 {% endhighlight %}
@@ -31,16 +31,20 @@ But using [NUnit] is not and requires the console to be installed (line 4) and r
 {% highlight yaml linenos=table %}
 language: csharp
 script:
-  - xbuild /p:Configuration=Debug MTAServiceStatus.sln
+  - xbuild /p:Configuration=Debug solution-name.sln
 before_install:
   - sudo apt-get install nunit-console
 before_script:
-  - nuget restore MTAServiceStatus.sln
+  - nuget restore solution-name.sln
 after_script:
   - nunit-console Tests/bin/Debug/Tests.dll
 {% endhighlight %}
 
-Line 3 and 9 need to be adapted to your build configuration.
+Line 3 and 9 need to be adapted to your build configuration (`Debug` might need to be changed to match your configuration name).  
+
+You can see a "real life" example here: [MTAServiceStatus on Github](https://github.com/cheesemacfly/MTAServiceStatus)  
+Associated Travis CI badge: [![Build Status](https://travis-ci.org/cheesemacfly/MTAServiceStatus.svg?branch=master)](https://travis-ci.org/cheesemacfly/MTAServiceStatus)  
+Travis CI configuration used for this project: [`.travis.yml` file on master](https://github.com/cheesemacfly/MTAServiceStatus/blob/master/.travis.yml)
 
 [NUnit]:        http://www.nunit.org/
 [library]:      https://github.com/cheesemacfly/MTAServiceStatus
