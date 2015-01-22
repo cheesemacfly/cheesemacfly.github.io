@@ -3,6 +3,7 @@ layout: post
 title:  "Setup Travis CI to compile a C# project and run NUnit tests"
 date:   2015-01-18 23:00:00
 categories: blog
+tags: C# .NET Travis CI NUnit
 ---
 I recently built a C# [library] to access the New York City MTA service status feed.  
 This project includes unit tests built with the [NUnit] framework and it was my first shot at using Tavis CI.  
