@@ -10,4 +10,4 @@ Got something to say? Please reach out to me using twitter or email (in the foot
 You can also find me here:
 
  - [LinkedIn \| Nicolas Guelpa](https://www.linkedin.com/in/nicolasguelpa)
- - [stackoverflow \| Cheesemacfly](http://stackoverflow.com/users/1443490)
+ - [stackoverflow \| cheesemacfly](http://stackoverflow.com/users/1443490)
