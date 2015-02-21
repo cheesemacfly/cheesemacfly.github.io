@@ -15,7 +15,7 @@ The rewrite module for IIS can be used to execute 2 actions:
  - rewrite => the URL stays the same but the content is loaded from somewhere else
  - redirects => when the user's browser is taken to a new URL
 
-Both mods use the same rules and conditions to determine if the action should be triggered or not and this article will mainly focus one those.  
+Both use the same rules and conditions to determine if the action should be triggered or not and this article will mainly focus one those.  
 
 A rule can be as simple as:
 
@@ -32,7 +32,7 @@ This rule checks if the requested path is exactly `code` (as in the URL http://w
 
 Now, the interesting part is when you start using back references. If you want your action to depend on a part (or all) of the requested URL, you can use back references to recall those values.
 
-Let's take the following example:
+Let's look at the following example:
 
 {% highlight xml linenos=table %}
 <rule name="Redirect to backreference">
