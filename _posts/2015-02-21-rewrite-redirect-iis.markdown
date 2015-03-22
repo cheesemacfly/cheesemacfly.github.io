@@ -19,7 +19,7 @@ Both use the same rules and conditions to determine if the action should be trig
 
 A rule can be as simple as:
 
-{% highlight xml linenos=table %}
+{% highlight xml %}
 <rule name="Redirect to github">
   <match url="^code$" />
   <action type="Redirect" url="https://github.com" />
@@ -34,7 +34,7 @@ Now, the interesting part is when you start using back references. If you want y
 
 Let's look at the following example:
 
-{% highlight xml linenos=table %}
+{% highlight xml %}
 <rule name="Redirect to backreference">
   <match url="^(.*)$" />
   <action type="Redirect" url="https://{R:1}.com" />
@@ -71,7 +71,7 @@ The `0` reference always contains the full input while the `1` will contain the 
 When you add conditions to your rule, you get access to more data from the request.  
 Let's one more time take an example:
 
-{% highlight xml linenos=table %}
+{% highlight xml %}
 <rule name="Redirect to backreference with domain">
   <match url="^(.*)$" />
   <conditions>
@@ -95,7 +95,7 @@ You can find the list of server variables and their documentation here:
   - if you have multiple conditions, the back reference used in the action refers only to the last **matching** one.
   - you can however use a back reference from a previous condition inside one.
 
-{% highlight xml linenos=table %}
+{% highlight xml %}
 <rule name="Redirect to backreference with domain">
   <match url=".*" />
   <conditions>
@@ -118,7 +118,7 @@ Always remember when you debug a redirect (specifically a 301) that browsers ten
 There's one usage that's not very well documented and that you might face one day: rewriting to an external website.  
 If you want http://website.com/code to rewrite to <https://github.com>, you can use the following rule:
 
-{% highlight xml linenos=table %}
+{% highlight xml %}
 <rule name="Rewrite to github">
   <match url="^code$" />
   <action type="Rewrite" url="https://github.com" />
