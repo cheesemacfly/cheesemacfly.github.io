@@ -23,10 +23,10 @@
     ga('send', 'pageview');
     
     $(function(){
-      $('a').on('click', function(e){
+      $('a').on('click', function(){
         var href = $(this).attr('href');
         if(/^(https?|mailto):/.test(href)){
-          ga.push('send', 'event', 'link', href);
+          ga('send', 'event', 'link', href);
         }
       });
     });
