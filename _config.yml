@@ -1,12 +1,12 @@
 # Site settings
-title: Debugging is not a crime
-email: nicolas@guelpa.me
+title: "nicolas.guelpa.me"
+email: "nicolas@guelpa.me"
 description:
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://nicolas.guelpa.me" # the base hostname & protocol for your site
 domain: "nicolas.guelpa.me"
-twitter_username: cheesemacfly
-github_username: cheesemacfly
+twitter_username: "cheesemacfly"
+github_username: "cheesemacfly"
 
 # Build settings
 markdown: kramdown
