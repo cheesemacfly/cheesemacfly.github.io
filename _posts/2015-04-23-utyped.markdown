@@ -1,0 +1,71 @@
+---
+layout: post
+title:  "uTyped Umbraco package"
+date:   2015-04-23 00:00:00
+categories: blog
+tags: Umbraco uTyped package AutoMapper
+---
+
+At [Deep Focus] we released our first [NuGet] package. 
+It is called [uTyped] and it solves a problem we've had with many projects when using [Umbraco].
+
+When we need to have API endpoints to return parts of our data, there is no direct support from the CMS; no easy way to get a C# model mapped to the values available in the backoffice.
+
+You could of course create a controller inheriting from `UmbracoApi` and then query your content with `Umbraco.TypedContentAtXPath()`.
+
+As fine as this solution is, the `IPublishedContent` object you get from your query doesn't have strongly typed properties.
+You have to query them one by one providing the type and name of the property (`content.GetPropertyValue<int>("ProductId")`).
+
+*Definitely not ideal...*
+
+That's where we've come up with a solution we have packaged in a library. Using the `TypedContentAtXPath` method and [AutoMapper], we are able to do:
+
+{% highlight C# %}
+public class MyController : UmbracoApiController
+{
+    private readonly UmbracoRepository _repo;
+
+    public TestController()
+    {
+        _repo = new UmbracoRepository(Umbraco);
+    }
+
+    public IEnumerable<Product> GetAll()
+    {
+        return _repo.GetAll<Product>();
+    }
+
+    public Product Get(int id)
+    {
+        return _repo.GetById<Product>(id);
+    }
+}
+{% endhighlight %}
+
+Granted you have setup [AutoMapper] using the provided profile:
+
+{% highlight C# %}
+protected override void ApplicationStarted(UmbracoApplicationBase umbracoApplication, ApplicationContext applicationContext)
+{
+    Mapper.AddProfile<UmbracoProfile<Product>>();
+}
+{% endhighlight %}
+
+And of course created your expected model where the properties name match those setup in the backoffice:
+
+{% highlight C# %}
+public class Product
+{
+    public int Id { get; set; }
+    public string Name { get; set; }
+    public string ShortName { get; set; }
+}
+{% endhighlight %}
+
+This is a fairly simple example but the library can do much more so make sure to check out the documentation: <https://github.com/DeepFocus/uTyped>.
+
+[uTyped]: https://github.com/DeepFocus/uTyped
+[AutoMapper]: http://automapper.org/
+[Deep Focus]: http://www.deepfocus.net/
+[NuGet]: https://www.nuget.org/packages/uTyped/
+[Umbraco]: http://umbraco.com/
