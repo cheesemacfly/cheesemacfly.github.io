@@ -108,6 +108,8 @@ You can find the list of server variables and their documentation here:
 
 In this case, the back reference `{C:0}` used in the action contains the last matched condition (`<add input="{C:0}_{QUERY_STRING}" pattern="^.+$" />`) which itself contains the value of the previous condition and the requested querystring.
 
+If you want to be able to capture multiple conditions to reuse them in your action, you can use `<conditions trackAllCaptures="true">`. More information available here: http://www.iis.net/learn/extensions/url-rewrite-module/url-rewrite-module-20-configuration-reference#Tracking_capture_groups_across_conditions_
+
 ## How to debug
 
 Debugging the rewrite rules can be tricky and at time annoying...but there's a very good tool available with the module called the [Failed Request Tracing] tool.  
