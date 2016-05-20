@@ -3,7 +3,8 @@ layout: page
 title: About
 permalink: /about/
 ---
-
+Hi, my name is Nicolas.  
+I love to write code and that's what I currently do for a living at [Deep Focus].  
 You'll find on this website some technical posts, mainly about C# and .NET  
 Got something to say? Reach out to me on [twitter] or by [email].
 
@@ -14,3 +15,4 @@ You can also find me here:
 
 [twitter]: https://github.com/{{ site.github_username }}
 [email]: mailto:{{ site.email }}
+[Deep Focus]: http://www.deepfocus.net
