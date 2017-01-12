@@ -3,10 +3,8 @@ title: "Bug recreational use"
 email: "nicolas@guelpa.me"
 description:
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://nicolas.guelpa.me" # the base hostname & protocol for your site
+url: "https://nicolas.guelpa.me" # the base hostname & protocol for your site
 domain: "nicolas.guelpa.me"
-twitter_username: "cheesemacfly"
-github_username: "cheesemacfly"
 
 # Build settings
 markdown: kramdown
