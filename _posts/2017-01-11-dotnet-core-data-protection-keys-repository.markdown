@@ -6,9 +6,9 @@ categories: blog
 tags: dotnet .NET Core cookie middleware data protection key repository load balanced
 ---
 
-Using the [.NET Core cookie authentication middleware](https://docs.microsoft.com/en-us/aspnet/core/security/authentication/cookie) as well as a load balanced environement usually makes the user's authentication "reset" between server hits.
-That's because the data in the cookie is encoded using a key that [might only available in the server's memory](https://docs.microsoft.com/en-us/aspnet/core/security/data-protection/configuration/default-settings#data-protection-default-settings) (typically in a unix environement it will be the case).
-So when the first server encryptes the cookie to send it back to the client it will use a key that it is not shared and other servers will not be able to decrypt the cookie on subsequent calls.
+Using the [.NET Core cookie authentication middleware](https://docs.microsoft.com/en-us/aspnet/core/security/authentication/cookie) as well as a load balanced environment usually makes the user's authentication "reset" between server hits.
+That's because the data in the cookie is encoded using a key that [might only available in the server's memory](https://docs.microsoft.com/en-us/aspnet/core/security/data-protection/configuration/default-settings#data-protection-default-settings) (typically in a unix environment it will be the case).
+So when the first server encryptes the cookie to send it back to the client it will use a key that is not shared and other servers will not be able to decrypt the cookie on subsequent calls.
 
 You could solve this by using sticky sessions on the load balancer or by moving this key to a file system location using:
 
@@ -58,9 +58,9 @@ public class DataProtectionKey
 And add it to the context:
 
 {% highlight C# %}
-public class DBContext : DbContext
+public class AppDbContext : DbContext
 {
-    public DBContext(DbContextOptions<DBContext> options) : base(options) { }
+    public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
 
     public DbSet<DataProtectionKey> DataProtectionKeys { get; set; }
 }
@@ -75,9 +75,9 @@ That's the most important part since that's where the write/read actions for the
 {% highlight C# %}
 public class DataProtectionKeyRepository : IXmlRepository
 {
-    private readonly DBContext _db;
+    private readonly AppDbContext _db;
 
-    public DataProtectionKeyRepository(DBContext db)
+    public DataProtectionKeyRepository(AppDbContext db)
     {
         _db = db;
     }
@@ -119,6 +119,10 @@ public void ConfigureServices(IServiceCollection services)
 {
     // custom entity framework key repository
     services.AddSingleton<IXmlRepository, DataProtectionKeyRepository>();
+
+    // make sure you have the AppDbContext setup too
+    services.AddDbContext<AppDbContext>(
+        options => options.UseSqlServer(Configuration.GetConnectionString("AppDbContext")));
 }
 {% endhighlight %}
 
