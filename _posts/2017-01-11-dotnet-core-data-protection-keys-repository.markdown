@@ -117,12 +117,12 @@ Now we can simply use dependency injection to setup the new repository (in the S
 // This method gets called by the runtime. Use this method to add services to the container.
 public void ConfigureServices(IServiceCollection services)
 {
-    // custom entity framework key repository
-    services.AddSingleton<IXmlRepository, DataProtectionKeyRepository>();
-
     // make sure you have the AppDbContext setup too
     services.AddDbContext<AppDbContext>(
         options => options.UseSqlServer(Configuration.GetConnectionString("AppDbContext")));
+
+    // custom entity framework key repository
+    services.AddSingleton<IXmlRepository, DataProtectionKeyRepository>();
 }
 {% endhighlight %}
 
