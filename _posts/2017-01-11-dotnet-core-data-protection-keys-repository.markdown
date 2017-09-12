@@ -117,7 +117,7 @@ Now we can simply use dependency injection to setup the new repository (in the S
 // This method gets called by the runtime. Use this method to add services to the container.
 public void ConfigureServices(IServiceCollection services)
 {
-    // make sure you have the AppDbContext setup too
+    // make sure you have the AppDbContext setup
     services.AddDbContext<AppDbContext>(
         options => options.UseSqlServer(Configuration.GetConnectionString("AppDbContext")));
 
