@@ -168,6 +168,8 @@ Assuming that you have a `export.pfx` file in the root of your project:
 public void ConfigureServices(IServiceCollection services)
 {
     // remember to replace the password with your real value
-    services.AddDataProtection().ProtectKeysWithCertificate(new X509Certificate2("export.pfx", "password"));
+    services.AddDataProtection()
+        .AddKeyManagementOptions(options => options.XmlRepository = built.GetService<IXmlRepository>())
+        .ProtectKeysWithCertificate(new X509Certificate2("export.pfx", "password"));
 }
 {% endhighlight %}
