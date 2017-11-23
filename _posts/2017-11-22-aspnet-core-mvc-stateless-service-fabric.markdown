@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "ASP.NET Core MVC project and stateless service in Service Fabric"
+title: "ASP.NET Core MVC and Service Fabric"
 date: 2017-11-22 00:00:00
 categories: blog
 tags: stateless service fabric dotnet ASP.NET Core MVC website
