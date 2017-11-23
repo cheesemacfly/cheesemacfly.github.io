@@ -18,6 +18,7 @@ It will help a lot to solve the issue but it doesn't remove the requirement for 
 We are going to solve this issue by separating the hosting from the actual 'real' project.
 
 Let's start by creating a ASP.NET Core MVC project using the version 2.0 of the framework:
+
 ![solution creation step 1](/assets/images/service-fabric-web-application/solution_creation_step1.png)
 
 ![solution creation step 2](/assets/images/service-fabric-web-application/solution_creation_step2.png)
@@ -32,12 +33,16 @@ That's where all our 'real' code will live.
 It doesn't mean that all your business logic must be in this project, it only means that this will be the main project for the website.
 
 We can now create a folder `Hosting` in our solution that will contain all the hosting related projects:
+
 ![hosting folder](/assets/images/service-fabric-web-application/hosting_folder.png)
 
 Now is time to add the Service Fabric project. We will choose a Stateless Service:
+
 ![service fabric app creation step 1](/assets/images/service-fabric-web-application/sf_app_creation_step1.png)
 
 ![service fabric app creation step 2](/assets/images/service-fabric-web-application/sf_app_creation_step2.png)
+
+We can choose an empty template since it will ve replaced by our `MyWebApplication` anyway:
 
 ![service fabric app creation step 3](/assets/images/service-fabric-web-application/sf_app_creation_step3.png)
 
