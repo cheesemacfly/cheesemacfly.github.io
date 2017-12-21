@@ -42,10 +42,10 @@ after_script:
 
 Line 3 and 9 need to be adapted to your build configuration (`Debug` might need to be changed to match your configuration name).  
 
-You can see a "real life" example here: [MTAServiceStatus on Github](https://github.com/cheesemacfly/MTAServiceStatus)  
-Associated Travis CI badge: [![Build Status](https://travis-ci.org/cheesemacfly/MTAServiceStatus.svg?branch=master)](https://travis-ci.org/cheesemacfly/MTAServiceStatus)  
-Travis CI configuration used for this project: [`.travis.yml` file on master](https://github.com/cheesemacfly/MTAServiceStatus/blob/master/.travis.yml)
+You can see a "real life" example here: [MTAServiceStatus on Github](https://github.com/cheesemacfly/MTAServiceStatus/tree/v0.3.0)  
+Associated Travis CI badge: [![Build Status](https://api.travis-ci.org/cheesemacfly/MTAServiceStatus.svg?tag=v0.3.0)](https://travis-ci.org/cheesemacfly/MTAServiceStatus)  
+Travis CI configuration used for this project: [`.travis.yml` file on master](https://github.com/cheesemacfly/MTAServiceStatus/blob/v0.3.0/.travis.yml)
 
 [NUnit]:        http://www.nunit.org/
-[library]:      https://github.com/cheesemacfly/MTAServiceStatus
+[library]:      https://github.com/cheesemacfly/MTAServiceStatus/tree/v0.3.0
 [doc]:          http://docs.travis-ci.com/user/languages/csharp/
