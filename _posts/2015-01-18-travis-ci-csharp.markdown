@@ -5,6 +5,14 @@ date:   2015-01-18 23:00:00
 categories: blog
 tags: C# .NET Travis CI NUnit
 ---
+
+__Edited on 2018-01-15:__  
+
+__I have added a [new article](/blog/2018/01/15/travis-ci-net-core.html) describing the same process but using .NET Core (using a library targeting .NET Standard).__
+
+___
+<br />
+
 I recently built a C# [library] to access the New York City MTA service status feed.  
 This project includes unit tests built with the [NUnit] framework and it was my first shot at using Tavis CI.  
 
