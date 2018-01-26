@@ -22,8 +22,12 @@ You could solve this by using sticky sessions on the load balancer or by moving 
 {% highlight C# %}
 public void ConfigureServices(IServiceCollection services)
 {
-   services.AddDataProtection()
+    services.AddDataProtection()
        .PersistKeysToFileSystem(new DirectoryInfo(@"\\server\share\directory\"));
+
+    // don't forget the rest of your ConfigureServices
+    // for example:
+    // services.AddMvc()
 }
 {% endhighlight %}
 
@@ -132,6 +136,10 @@ public void ConfigureServices(IServiceCollection services)
 
     // custom entity framework key repository
     services.AddSingleton<IXmlRepository, DataProtectionKeyRepository>();
+
+    // don't forget the rest of your ConfigureServices
+    // for example:
+    // services.AddMvc()
 }
 {% endhighlight %}
 
@@ -151,6 +159,10 @@ public void ConfigureServices(IServiceCollection services)
     // I'll update the post once/if I find a better way to get the repository instance
     var built = services.BuildServiceProvider();
     services.AddDataProtection().AddKeyManagementOptions(options => options.XmlRepository = built.GetService<IXmlRepository>());
+
+    // don't forget the rest of your ConfigureServices
+    // for example:
+    // services.AddMvc()
 }
 {% endhighlight %}
 
@@ -171,5 +183,9 @@ public void ConfigureServices(IServiceCollection services)
     services.AddDataProtection()
         .AddKeyManagementOptions(options => options.XmlRepository = built.GetService<IXmlRepository>())
         .ProtectKeysWithCertificate(new X509Certificate2("export.pfx", "password"));
+
+    // don't forget the rest of your ConfigureServices
+    // for example:
+    // services.AddMvc()
 }
 {% endhighlight %}
