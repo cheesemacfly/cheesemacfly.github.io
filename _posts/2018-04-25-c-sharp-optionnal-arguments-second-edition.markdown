@@ -51,7 +51,7 @@ Fairly straight forward example. Let's look at the IL for the constructor:
 {% endhighlight %}
 
 What's going on here? Well, the CLR is given a hint that the parameter `bar` is optionnal with `[opt]`.
-And the default value is given on the following line: `.param [1] = int32(0x00000016)` (0x00000016 is 22 in base 10);
+And the default value is given on the following line: `.param [1] = int32(0x00000016)` (0x00000016 is 22 in base 10)
 
 As we can see, the compiler does not create a new parameterless constructor calling the other one with the default value.
 
