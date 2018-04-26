@@ -9,10 +9,9 @@ tags: C# constructor parameterless reflection default automapper
 There's not many things in C# that I wish were different, but this is one of them.
 If you define a `class`, it comes with a default parameterless constructor if you don't define one:
 
-> If a class contains no instance constructor declarations, a default instance constructor is automatically provided.
-> That default constructor simply invokes the parameterless constructor of the direct base class.
+> Unless the class is static, classes without constructors are given a public default constructor by the C# compiler in order to enable class instantiation.
 
-<https://msdn.microsoft.com/en-us/library/aa645608%28v=vs.71%29.aspx>
+<https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/using-constructors>
 
 So this class:
 
