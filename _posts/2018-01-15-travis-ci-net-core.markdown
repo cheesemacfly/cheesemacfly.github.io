@@ -6,7 +6,7 @@ categories: blog
 tags: C# .NET Core Travis AppVeyor CI xUnit NuGet
 ---
 
-[2 years ago](/blog/2015/01/18/travis-ci-csharp.html), I wrote a short post about setting up Travis CI with .Net 4.5 (including running the tests with NUnit) and now is time for an update.  
+[3 years ago](/blog/2015/01/18/travis-ci-csharp.html), I wrote a short post about setting up Travis CI with .Net 4.5 (including running the tests with NUnit) and now is time for an update.  
 
 I have upgraded the library in the example ([MTAServiceStatus on Github](https://github.com/cheesemacfly/MTAServiceStatus)) and it is now targeting .NET Standard.
 The test framework this time around is [xUnit](https://xunit.github.io/) ([MSTest is still not supported with Travis](https://docs.travis-ci.com/user/languages/csharp/#Other-test-frameworks)).

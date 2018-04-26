@@ -67,8 +67,13 @@ public class Foo
 }
 {% endhighlight %}
 
-The reasoning behind this is probably that the default parameterless constructor calls the base class one and for consistency it shouldn't call anything else (because this is how it was defined).
-Still would be a nice to have...
+<s>The reasoning behind this is probably that the default parameterless constructor calls the base class one and for consistency it shouldn't call anything else (because this is how it was defined).
+Still would be a nice to have...</s>
+<br/>
+
+__Updated in April 2018:__  
+
+I have posted a new post about why the last line was actually a wrong assumption. You can read it [here](/blog/2018/04/25/c-sharp-optionnal-arguments-second-edition.html).
 
 
 [AutoMapper]: http://automapper.org/
