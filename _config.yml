@@ -1,12 +1,18 @@
-# Site settings
-title: "Nicolas Guelpa's Blog"
-email: "nicolas@guelpa.me"
-description:
-baseurl: "" # the subpath of your site, e.g. /blog/
-url: "https://nicolas.guelpa.me" # the base hostname & protocol for your site
-domain: "nicolas.guelpa.me"
-
-# Build settings
+---
+title: Nicolas Guelpa's Blog
+timezone: UTC
+collections:
+  posts:
+    title: Posts
+    output: true
+  uploads:
+    title: Uploads
+    output: true
+email: nicolas@guelpa.me
+description: 
+baseurl: ''
+url: https://nicolas.guelpa.me
+domain: nicolas.guelpa.me
 markdown: kramdown
 gems:
-  - jekyll-sitemap
+- jekyll-sitemap

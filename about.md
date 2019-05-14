@@ -1,8 +1,9 @@
 ---
-layout: page
 title: About
-permalink: /about/
+permalink: "/about/"
+layout: page
 ---
+
 Hi, my name is Nicolas.  
 I love to write code and that's what I currently do for a living at [artnet].  
 You'll find on this website some technical posts mainly about C# and .NET  

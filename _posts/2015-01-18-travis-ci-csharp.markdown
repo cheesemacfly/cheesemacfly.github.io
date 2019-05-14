@@ -1,9 +1,15 @@
 ---
+title: Setup Travis CI to compile a C# project and run NUnit tests
+date: 2015-01-18 23:00:00 Z
+categories:
+- blog
+tags:
+- C#
+- ".NET"
+- Travis
+- CI
+- NUnit
 layout: post
-title:  "Setup Travis CI to compile a C# project and run NUnit tests"
-date:   2015-01-18 23:00:00
-categories: blog
-tags: C# .NET Travis CI NUnit
 ---
 
 __Edited on 2018-01-15:__  

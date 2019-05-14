@@ -1,9 +1,19 @@
 ---
+title: Setup Travis CI to compile a .NET CORE project, run the tests and package it
+  for NuGet
+date: 2018-01-15 00:00:00 Z
+categories:
+- blog
+tags:
+- C#
+- ".NET"
+- Core
+- Travis
+- AppVeyor
+- CI
+- xUnit
+- NuGet
 layout: post
-title:  "Setup Travis CI to compile a .NET CORE project, run the tests and package it for NuGet"
-date:   2018-01-15 00:00:00
-categories: blog
-tags: C# .NET Core Travis AppVeyor CI xUnit NuGet
 ---
 
 [3 years ago](/blog/2015/01/18/travis-ci-csharp.html), I wrote a short post about setting up Travis CI with .Net 4.5 (including running the tests with NUnit) and now is time for an update.  

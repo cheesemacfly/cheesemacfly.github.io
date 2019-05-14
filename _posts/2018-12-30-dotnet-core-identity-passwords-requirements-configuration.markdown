@@ -1,9 +1,16 @@
 ---
+title: ASP.NET Identity passwords requirements configuration
+date: 2018-12-30 00:00:00 Z
+categories:
+- blog
+tags:
+- C#
+- dotnet
+- core
+- IPasswordValidator
+- Identity
+- Configuration
 layout: post
-title:  "ASP.NET Identity passwords requirements configuration"
-date:   2018-12-30 00:00:00
-categories: blog
-tags: C# dotnet core IPasswordValidator Identity Configuration
 ---
 
 Using ASP.NET Core Identity is great out of the box to manage users in a web app.

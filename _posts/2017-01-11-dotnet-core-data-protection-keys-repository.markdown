@@ -1,10 +1,27 @@
 ---
+title: ".NET Core cookie authentication middleware, load balancing and the data protection
+  system"
+date: 2017-01-11 00:00:00 Z
+categories:
+- blog
+tags:
+- dotnet
+- ".NET"
+- Core
+- cookie
+- middleware
+- data
+- protection
+- system
+- key
+- repository
+- load
+- balanced
 layout: post
-title:  ".NET Core cookie authentication middleware, load balancing and the data protection system"
-date:   2017-01-11 00:00:00
-categories: blog
-tags: dotnet .NET Core cookie middleware data protection system key repository load balanced
-excerpt: Using the .NET Core cookie authentication middleware as well as a load balanced environment usually makes the user's authentication "reset" between server hits. That's because the data in the cookie is encoded using a key that might only available in the server's memory (typically in a unix environment it will be the case).
+excerpt: Using the .NET Core cookie authentication middleware as well as a load balanced
+  environment usually makes the user's authentication "reset" between server hits.
+  That's because the data in the cookie is encoded using a key that might only available
+  in the server's memory (typically in a unix environment it will be the case).
 ---
 
 __Edited on 2017-09-21:__  

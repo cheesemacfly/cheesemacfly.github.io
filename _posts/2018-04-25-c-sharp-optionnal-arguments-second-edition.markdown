@@ -1,9 +1,18 @@
 ---
+title: The C# parameterless default constructor - second edition
+date: 2018-04-25 23:00:00 Z
+categories:
+- blog
+tags:
+- C#
+- constructor
+- parameterless
+- reflection
+- default
+- value
+- generics
+- rant
 layout: post
-title:  "The C# parameterless default constructor - second edition"
-date:   2018-04-25 23:00:00
-categories: blog
-tags: C# constructor parameterless reflection default value generics rant
 ---
 
 [Back in 2015](/blog/2015/03/29/c-sharp-constructor.html) I wrote an article about the C# default parameterless constructor and how it goes away if you write one with default values for the parameters.

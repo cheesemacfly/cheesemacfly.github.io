@@ -1,9 +1,17 @@
 ---
+title: Google Tag Manager and React/Redux
+date: 2017-07-30 00:00:00 Z
+categories:
+- blog
+tags:
+- redux
+- react
+- js
+- google
+- tag
+- manager
+- analytics
 layout: post
-title:  "Google Tag Manager and React/Redux"
-date:   2017-07-30 00:00:00
-categories: blog
-tags: redux react js google tag manager analytics
 ---
 
 The Google Tag Manager dataLayer is one of the nicest thing when it comes to analytics for the developers. But there's one major issue when you start having 
