@@ -1,16 +1,9 @@
 ---
-title: The C# parameterless default constructor
-date: 2015-03-29 22:00:00 Z
-categories:
-- blog
-tags:
-- C#
-- constructor
-- parameterless
-- reflection
-- default
-- automapper
 layout: post
+title:  "The C# parameterless default constructor"
+date:   2015-03-29 22:00:00
+categories: blog
+tags: C# constructor parameterless reflection default automapper
 ---
 
 There's not many things in C# that I wish were different, but this is one of them.

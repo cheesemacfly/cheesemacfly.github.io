@@ -1,15 +1,9 @@
 ---
-title: IIS double authentication
-date: 2015-05-31 00:00:00 Z
-categories:
-- blog
-tags:
-- IIS
-- rewrite
-- authentication
-- ARR
-- proxy
 layout: post
+title:  "IIS double authentication"
+date:   2015-05-31 00:00:00
+categories: blog
+tags: IIS rewrite authentication ARR proxy
 ---
 
 Setting up double authentication for a website running on IIS 7+ running in "Integrated mode"  can be a very hard task.  

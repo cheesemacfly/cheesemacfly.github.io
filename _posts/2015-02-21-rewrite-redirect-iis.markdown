@@ -1,16 +1,10 @@
 ---
-title: Understand IIS rewrite and redirect rules
-date: 2015-02-21 00:00:00 Z
-categories:
-- blog
-tags:
-- IIS
-- Rewrite
-- Redirect
-- Back-references
 layout: post
+title:  "Understand IIS rewrite and redirect rules"
+date:   2015-02-21 00:00:00
+categories: blog
+tags: IIS Rewrite Redirect Back-references
 ---
-
 A while ago, I answered a question on [stackoverflow] asking clarifications about the IIS rewrite module and how back references work.
 This question has received quite some attention since it was posted and I wanted to write a simple guide for this module here.  
 

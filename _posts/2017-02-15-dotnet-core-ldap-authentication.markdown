@@ -1,16 +1,9 @@
 ---
-title: ".NET Core LDAP authentication"
-date: 2017-02-15 00:00:00 Z
-categories:
-- blog
-tags:
-- dotnet
-- ".NET"
-- Core
-- LDAP
-- authentication
-- cookie
 layout: post
+title:  ".NET Core LDAP authentication"
+date:   2017-02-15 00:00:00
+categories: blog
+tags: dotnet .NET Core LDAP authentication cookie authentication
 ---
 
 .NET Core unfortunately doesn't [yet](https://github.com/dotnet/corefx/issues/2089) come with a native LDAP implementation...but you can use a third party library that will do the job for you: <https://github.com/dsbenghe/Novell.Directory.Ldap.NETStandard>

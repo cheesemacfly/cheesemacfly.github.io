@@ -1,18 +1,9 @@
 ---
-title: ASP.NET Core MVC and Service Fabric
-date: 2017-11-22 00:00:00 Z
-categories:
-- blog
-tags:
-- stateless
-- service
-- fabric
-- dotnet
-- ASP.NET
-- Core
-- MVC
-- website
 layout: post
+title: "ASP.NET Core MVC and Service Fabric"
+date: 2017-11-22 00:00:00
+categories: blog
+tags: stateless service fabric dotnet ASP.NET Core MVC website
 ---
 
 Hosting a website in service fabric has many advantages but it comes with a cost: you need to build your code around it which ties your project to the hosting plateform.

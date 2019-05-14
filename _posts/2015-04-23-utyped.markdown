@@ -1,14 +1,9 @@
 ---
-title: uTyped Umbraco package
-date: 2015-04-23 00:00:00 Z
-categories:
-- blog
-tags:
-- Umbraco
-- uTyped
-- package
-- AutoMapper
 layout: post
+title:  "uTyped Umbraco package"
+date:   2015-04-23 00:00:00
+categories: blog
+tags: Umbraco uTyped package AutoMapper
 ---
 
 At [Deep Focus] we released our first [NuGet] package. 
